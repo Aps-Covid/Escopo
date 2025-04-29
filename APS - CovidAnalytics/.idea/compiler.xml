@@ -6,10 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="covidanalytics" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="covidanalytics" target="24" />
-    </bytecodeTargetLevel>
   </component>
 </project>
