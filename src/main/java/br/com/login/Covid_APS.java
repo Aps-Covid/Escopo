@@ -20,7 +20,8 @@ public class Covid_APS {
     public static void main(String[] args) {
         try {
             // URL da API com dados de COVID
-            String apiUrl = "https://brasil.io/api/dataset/covid19/caso/data/?state=SP&is_last=True";
+            String apiUrl = "https://brasil.io/api/v1/dataset/covid19/caso/data/?epidemiological_week=&date=&order_for_place=&state=SP&city_ibge_code=&place_type=&last_available_date=&is_last=True&is_repeated=False  ";
+            String apiUrl2 = "https://brasil.io/api/v1/dataset/covid19/obito_cartorio/data/?epidemiological_week=&date=&order_for_place=&state=SP&city_ibge_code=&place_type=&last_available_date=&is_last=True&is_repeated=False";
 
             // Criar conexão HTTP
             URL url = new URL(apiUrl);
