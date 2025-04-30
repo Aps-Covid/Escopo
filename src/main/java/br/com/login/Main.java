@@ -71,6 +71,10 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        // Chama a inicialização do banco de dados e inserção dos dados da API
+        DB_Conn.main(args);
+
+        // Depois inicializa a interface gráfica
         launch(args);
     }
 }
