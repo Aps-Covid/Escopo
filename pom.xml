@@ -10,28 +10,21 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
+        <!-- GSON para manipulação de JSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.10.1</version>
         </dependency>
 
-
-
-
-        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.10.1</version>
-        </dependency>
-
+        <!-- Conector JDBC para MySQL -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
 
+        <!-- JavaFX -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -42,7 +35,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>21.0.7</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -52,11 +44,16 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>CovidDashboard</mainClass>
+                    <mainClass>br.com.login.Main</mainClass>
+                    <options>
+                        <option>--module-path</option>
+                        <option>C:\\Users\\kaiqu\\Downloads\\openjfx-21.0.7_windows-x64_bin-sdk\\javafx-sdk-21.0.7\\lib</option>
+                        <option>--add-modules</option>
+                        <option>javafx.controls,javafx.fxml</option>
+                    </options>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 </project>

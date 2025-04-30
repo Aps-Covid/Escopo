@@ -25,9 +25,5 @@ public class TelaLoginController
         System.out.println("Senha: " + senha);
     }
 
-    @FXML
-    public void abrirTelaCadastro() {
-        br.com.login.Main.trocarCena("/view/TelaCadastro.fxml");
-    }
 
 }
