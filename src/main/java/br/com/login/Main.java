@@ -71,6 +71,9 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        // Resetando o banco de dados antes de iniciar a interface gráfica
+        ResetDB.resetDatabase();
+
         // Chama a inicialização do banco de dados e inserção dos dados da API
         DB_Conn.main(args);
 
