@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class ConcederPermissoes {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/";
+    private static final String DB_URL = DatabaseConfig.getUrl();
 
     public static void concederPermissoes(String usuario, String senha, String usuarioAlvo) {
         if (usuarioAlvo.equalsIgnoreCase("root")) {

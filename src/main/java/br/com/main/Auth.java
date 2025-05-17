@@ -5,9 +5,9 @@ import java.sql.*;
 public class Auth {
 
     public static boolean logar(String user, String password) {
-        String url = "jdbc:mysql://localhost:3306/coviddb";
-        String dbUser = "root";
-        String dbPassword = "coloquesenha";
+        String url = DatabaseConfig.getUrlCompleta();
+        String dbUser = DatabaseConfig.getUser();
+        String dbPassword = DatabaseConfig.getPassword();
 
         String sql = "SELECT * FROM auth WHERE adminuser = ? AND senha = ?";
 

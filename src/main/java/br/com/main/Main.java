@@ -10,6 +10,7 @@ import java.util.Objects;
 import javafx.animation.FadeTransition;
 import javafx.animation.PauseTransition;
 import javafx.util.Duration;
+import javafx.scene.image.Image;
 
 public class Main extends Application
 {
@@ -21,6 +22,8 @@ public class Main extends Application
         {
             Parent root = FXMLLoader.load(Main.class.getResource(fxmlPath));
             Stage stage = (Stage) primaryStage.getScene().getWindow();
+
+
             stage.setScene(new Scene(root));
 
         } catch (IOException e)
@@ -40,6 +43,9 @@ public class Main extends Application
         stage.setTitle("APS - Projeto Covid Analytics");
         stage.setResizable(false);
         stage.show();
+
+        Image icon = new Image(getClass().getResourceAsStream("/images/logo.png"));
+        stage.getIcons().add(icon);
 
         // Espera 2 segundos com splash visível
         PauseTransition delay = new PauseTransition(Duration.seconds(5));

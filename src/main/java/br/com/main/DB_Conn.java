@@ -9,12 +9,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class DB_Conn {
-    private static final String BASE_URL = "jdbc:mysql://localhost:3306/";
-    private static final String DB_NAME = "covidDB";
-    private static final String USER = "root";
+    private static final String BASE_URL = DatabaseConfig.getUrl();
+    private static final String DB_NAME = DatabaseConfig.getName();
+    private static final String USER = DatabaseConfig.getUser();
 
     // -------------------------------- ! ALTERAR ! --------------------------------
-    private static final String PASSWORD = "coloquesenha";
+    private static final String PASSWORD = DatabaseConfig.getPassword();
     // -------------------------------- ! ALTERAR ! --------------------------------
 
     private static final String API_TOKEN = "62db0dc0196657b3e5e8414d6b2f02b79e51a026";
