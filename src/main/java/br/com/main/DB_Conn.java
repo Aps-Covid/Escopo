@@ -163,7 +163,7 @@ public class DB_Conn {
         try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(
                 "INSERT IGNORE INTO auth (adminuser, senha) VALUES (?, ?)")) {
             stmt.setString(1, "admin");
-            stmt.setString(2, "admin123");
+            stmt.setString(2, DatabaseConfig.getAdmPass());
             stmt.executeUpdate();
             System.out.println("Usuário admin inserido.");
         } catch (SQLException e) {

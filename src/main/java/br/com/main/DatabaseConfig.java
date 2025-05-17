@@ -36,6 +36,10 @@ public class DatabaseConfig {
         return properties.getProperty("db.name");
     }
 
+    public static String getAdmPass() {
+        return properties.getProperty("db.senhausuario");
+    }
+
     public static String getPB() {
         return properties.getProperty("pb.powerbi");
     }
