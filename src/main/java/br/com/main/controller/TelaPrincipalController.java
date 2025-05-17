@@ -2,6 +2,7 @@ package br.com.main.controller;
 
 import br.com.main.CovidDataAnalyzer;
 import br.com.main.DB_Conn;
+import br.com.main.DatabaseConfig;
 import br.com.main.TabelaRank;
 import javafx.animation.*;
 import javafx.application.Platform;
@@ -147,7 +148,7 @@ public class TelaPrincipalController implements Initializable {
             }
                 @FXML private void exportarBI() {
                     try {
-                        String urlPowerBI = "https://app.powerbi.com/"; // ALTERAR
+                        String urlPowerBI = DatabaseConfig.getPB(); // ALTERAR
                         java.awt.Desktop.getDesktop().browse(new java.net.URI(urlPowerBI));
                     } catch (Exception e) {
                         e.printStackTrace();

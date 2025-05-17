@@ -36,6 +36,10 @@ public class DatabaseConfig {
         return properties.getProperty("db.name");
     }
 
+    public static String getPB() {
+        return properties.getProperty("pb.powerbi");
+    }
+
     public static String getUrlCompleta() {
         return getUrl() + getName();
     }
